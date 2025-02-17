@@ -38,24 +38,14 @@ A simple Contact Manager App built with Node.js, Express.js, and MongoDB. This a
 4. Start the server: npm start
 
 
-Project Structure ------>
-   Contact_Manager_App/
-├── config/
-│   └── DBconnection.js
-├── controllers/
-│   ├── contactController.js
-│   └── userController.js
-├── middlewares/
-│   ├── errorHandler.js
-│   └── validateTokenHandler.js
-├── model/
-│   ├── contactModel.js
-│   └── userModel.js
-├── routes/
-│   ├── contactRouter.js
-│   └── userRouter.js
-├── .env
-├── .gitignore
-├── package.json
-├── package-lock.json
-└── server.js
+User Routes
+   POST /api/user/register:    Register a new user
+   POST /api/user/login:       Log in a user
+   GET /api/user/info:         Get information about the logged-in user (protected route)
+
+Contact Routes
+   GET /api/contacts:        Get all contacts for the logged-in user (protected route)
+   POST /api/contacts:       Create a new contact (protected route)
+   GET /api/contacts/:id:    Get a specific contact by ID (protected route)
+   PUT /api/contacts/:id:    Update a contact by ID (protected route)
+   DELETE /api/contacts/:id: Delete a contact by ID (protected route)
